@@ -37,7 +37,8 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  let length = numbers.length;
+  return length;
 }
 
 /**
@@ -45,15 +46,22 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  for (const number of numbers) {
+  sum += number;
 }
-
+return sum;
+}
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+let mean = 0;
+for (const number of numbers) {
+  mean += number/numbers.length;
+}
+return mean;
 }
 
 /**
@@ -61,15 +69,24 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
-}
-
+let smallest = Infinity;
+    for(let number of numbers) {
+      if(number < smallest) {
+        smallest = number;
+      }
+    } return smallest;
+  }
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let largest = !Infinity;
+    for(let number of numbers) {
+      if(number > largest) {
+        largest = number;
+      }
+    } return largest;
 }
 
 /**
@@ -77,7 +94,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  return getMax(numbers) - getMin(numbers);
 }
 
 /**
@@ -85,7 +102,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evens = []
+  for (number of numbers) {
+  if (number % 2 == 0) {
+    evens.push(number)
+  }
+}
+return evens
 }
 
 /**
@@ -93,5 +116,12 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
-}
+    let odds = []
+    for (number of numbers) {
+    if (number % 2 == 1) {
+      odds.push(number)
+    }
+  }
+  return odds
+  }
+
